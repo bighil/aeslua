@@ -22,5 +22,4 @@ To obtain a copy, write to the Free Software Foundation, Inc.,
 Author
 -------
 Matthias Hilbig
-http://homepages.upb.de/hilbig/aeslua/
-hilbig@upb.de
+mhilbig@gmail.com

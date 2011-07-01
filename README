@@ -45,4 +45,4 @@ So if you need to encrypt much data with AES, do yourself a favor and use a
 C-Implementation. But if you only need to encrypt short strings and you have 
 no control over the lua environment (like in games :-)) use this library.
 
-Matthias Hilbig (hilbig@upb.de)
+Matthias Hilbig <mhilbig@gmail.com>
