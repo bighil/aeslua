@@ -1,4 +1,4 @@
-DIST=aeslua-0.2
+DIST=aeslua-0.2.1
 LIBDIR=/usr/local/lib/lua/5.1
 
 SUBMODULES=aes buffer ciphermode gf util

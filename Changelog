@@ -4,4 +4,5 @@ Version 0.2:
 	- removed utility classes from global namespace (Norman Ramsey)
 	- moved ciphermodes into one file
 	- restructured file layout
-	
+Version 0.2.1:
+        - updated email address	
