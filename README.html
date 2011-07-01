@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>aeslua</title>
+</head>
+<body>
+<h2>AES for lua</h2>
+<p>
+This files contain an implementation of AES in lua. The only additional library 
+needed is bitlib.
+</p>
+<h3>Usage</h3>
+<p>aeslua.lua contains a simple API to encrypt and decrypt lua strings.</p>
+<p>To encrypt the string "geheim" with the password "password" use:</p>
+<pre>
+require("aeslua");
+cipher = aeslua.encrypt("password", "secret");
+</pre>
+<p>and to decrypt the string again:</p>
+<pre>
+plain = aeslua.decrypt("password", cipher);
+</pre>
+<p>You can also specify the key size and the encryption mode. For further examples
+look into the file src/testcryptotest.lua.</p>
+<p>To use AES directly, have a look at aes.lua and at the example usage in 
+testaes.lua.</p>
+<h3>Installation</h3>
+<p>Edit the LIBDIR variable in the Makefile and run</p>
+<pre>
+make install
+</pre>
+<h3>Speed</h3>
+<p>
+The implementation is rather optimized (it uses tables for most AES operations) 
+but still cannot compete with AES written in other languages. Typical AES 
+implementations reach several 100 MBit per second, this implementation only 
+reaches 400 kBit per second. The most plausible reason is the heavy reliance
+of AES on bit operations. As lua numbers are doubles bitlib needs to convert
+them to long values for each bit operation.
+</p>
+<p>
+So if you need to encrypt much data with AES, do yourself a favor and use a 
+C-Implementation. But if you only need to encrypt short strings and you have 
+no control over the lua environment (like in games :-)) use this library.
+</p>
+<h3>Download</h3>
+<ul>
+	<li> Version <a href="dist/aeslua-0.1.zip">0.1</a> (2nd November 2006)
+	<li> Version <a href="dist/aeslua-0.1.1.zip">0.1.1</a> (12th November 2006)
+	<li> Version <a href="dist/aeslua-0.2.zip">0.2</a> (27th March 2007)
+</ul>
+
+<p>
+Matthias Hilbig (hilbig@upb.de)
+</p>
+</body>
+</html>
